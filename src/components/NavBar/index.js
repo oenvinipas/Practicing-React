@@ -6,7 +6,6 @@ import {
   NavBarLogo,
   NavBarLogoLink,
   NavBarHelpCenter,
-  NavBarHelpCenterLink,
   NavBarUnorderedList,
   NavBarButton,
   NavBarButtonLink
@@ -18,24 +17,43 @@ const NavBar = () => {
   return (
     <NavBarContainer>
       <NavBarWrapper>
+
         <NavBarLeftSide>
           <NavBarLogo>
             <NavBarLogoLink src={ catCompanyLogo } alt="company logo" href=""></NavBarLogoLink>
           </NavBarLogo>
-          <NavBarHelpCenter href="">
+          <NavBarHelpCenter href="/">
             Help Center
-            {/* <NavBarHelpCenterLink>Help Center</NavBarHelpCenterLink> */}
           </NavBarHelpCenter>
         </NavBarLeftSide>
         
         <NavBarUnorderedList>
           <NavBarButton>
-            <NavBarButtonLink to="">Submit a Request</NavBarButtonLink>
+            <NavBarButtonLink
+              to="/" 
+              whiteBorder={true}
+              colorBlue={false} 
+              largerPadding={false}
+              changeBgOnHover={false}
+              changeTextColorOnHover={false}
+              >
+                Submit a request
+            </NavBarButtonLink>
           </NavBarButton>
           <NavBarButton>
-            <NavBarButtonLink to="" colorBlue={true}>Sign Up</NavBarButtonLink>
+            <NavBarButtonLink 
+              to="/" 
+              whiteBorder={false}
+              colorBlue={true} 
+              largerPadding={true}
+              changeBgOnHover={true}
+              changeTextColorOnHover={true}
+              >
+                Sign in
+              </NavBarButtonLink>
           </NavBarButton>
         </NavBarUnorderedList>
+
       </NavBarWrapper>
     </NavBarContainer>
   )

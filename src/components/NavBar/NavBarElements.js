@@ -4,7 +4,7 @@ import { Link as LinkRouter } from 'react-router-dom';
 
 export const NavBarContainer = styled.nav`
     background-color: #000;
-    height: 96px;
+    height: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,11 @@ export const NavBarWrapper = styled.div`
     width: 100%;
     padding: 0 24px;
     z-index: 1;
-    margin: 0px 95px;
+    margin: 0px 100px;
 `;
 
 export const NavBarLeftSide = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
 `;
 
@@ -35,7 +34,7 @@ export const NavBarLogo = styled.a`
 `;
 
 export const NavBarLogoLink = styled.img`
-    height: 88px;
+    height: 75px;
 `;
 
 export const NavBarHelpCenter = styled.a`
@@ -51,10 +50,6 @@ export const NavBarHelpCenter = styled.a`
     }
 `;
 
-export const NavBarHelpCenterLink = styled.p`
-    
-`;
-
 export const NavBarUnorderedList = styled.ul`
     display: flex;
     align-items: center;
@@ -62,23 +57,26 @@ export const NavBarUnorderedList = styled.ul`
 `;
 
 export const NavBarButton = styled.button`
-    padding: 10px;
-    margin: 0 10px;
+    padding: 3px 13px;
     border: none;
     background: none;
 `;
 
 export const NavBarButtonLink = styled(LinkRouter)`
-    border-radius: 12px;
-    border: 1px solid black;
-    padding: 10px 18px;
+    border-radius: 8px;
+    margin: 0px -5px;
+    padding: ${({largerPadding}) => (largerPadding ? "11px 33px" : "10px 20px")};
+    /* padding: 10px 20px; */
     text-decoration: none;
-    color: black;
-    background-color: ${({colorBlue}) => (colorBlue ? "#4C5FD5" : 'gray')};
+    background-color: ${({colorBlue}) => (colorBlue ? "#4C5FD5" : '#191a19')};
     color: white;
     font-size: 25px;
+    border: ${({whiteBorder}) => (whiteBorder ? "1px solid white" : "none")};
+    transition: all 0.2s ease-in-out;
 
     &:hover {
-
+        background-color: ${({changeBgOnHover}) => (changeBgOnHover ? "white" : "none")};
+        color: ${({changeTextColorOnHover}) => (changeTextColorOnHover ? "black" : "white")};
+        transition: all 0.2s ease-in-out;
     }
 `
