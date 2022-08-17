@@ -41,6 +41,8 @@ const NavBar = () => {
             </NavBarButtonLink>
           </NavBarButton>
           <NavBarButton>
+
+            {/* this button needs a different font from the one above */}
             <NavBarButtonLink 
               to="/" 
               whiteBorder={false}
